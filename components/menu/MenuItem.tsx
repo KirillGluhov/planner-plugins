@@ -13,9 +13,10 @@ export const MenuItem = ({item}: {item: MenuItemType}) => {
                 pressed && styles.pressed,
                 styles.item
             ]}
+            onPress={() => router.push(item.path)}
         >
-            <TouchableOpacity  onPress={() => router.push(item.path)} style={styles.menuItem}>
-                <Image source={getIconSource(item.icon)}/>
+            <TouchableOpacity onPress={() => router.push(item.path)} style={styles.menuItem}>
+                <Image style={styles.image} source={getIconSource(item.icon)}/>
                 <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>
         </Pressable>
@@ -26,6 +27,11 @@ export const styles = StyleSheet.create({
     item: {
         boxShadow: "5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff",
         borderRadius: 16,
+    },
+    image: {
+        width: 24,
+        height: 24,
+        resizeMode: "contain"
     },
     menuItem: {
         marginLeft: 16,

@@ -1,4 +1,4 @@
-import menuItemIconPath  from '@/assets/icons/menu-item.svg';
+import menuItemIconPath  from '@/assets/icons/menu-item.png';
 import icons from '@/const/icons';
 
 export const getIconSource = (iconPath?: string) => {
@@ -13,7 +13,7 @@ export const getIconSource = (iconPath?: string) => {
         return {uri: iconPath}
     }
 
-    const iconKey = iconPath.split("/").pop()?.replace(".svg", "");
+    const iconKey = iconPath.split("/").pop()?.replace(".png", "");
 
     if (iconKey && icons[iconKey])
     {

@@ -14,7 +14,7 @@ const CustomDrawerContent = (props: JSX.IntrinsicAttributes & { state: DrawerNav
         </View>
         <View style={styles.menu}>
             {menuItems.map((item) => (
-                <MenuItem item={item}/>
+                <MenuItem item={item} key={item.text}/>
             ))}
         </View>
     </DrawerContentScrollView>

@@ -1,6 +1,8 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function ProfileScreen()
 {
-    return (<Text>Профиль</Text>)
+    return (<View>
+        <Text>Главная</Text>
+    </View>)
 }

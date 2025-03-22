@@ -1,7 +1,7 @@
 const icons: Record<string, any> = {
-    home: require('@/assets/icons/home.svg'),
-    profile: require('@/assets/icons/profile.svg'),
-    plugin: require('@/assets/icons/plugin.svg')
+    home: require('@/assets/icons/home.png'),
+    profile: require('@/assets/icons/profile.png'),
+    plugin: require('@/assets/icons/plugin.png')
 }
 
 

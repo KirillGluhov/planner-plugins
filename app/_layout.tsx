@@ -40,6 +40,7 @@ export default function RootLayout() {
       >
         <Drawer.Screen name="profile" options={{title: "Профиль"}}/>
         <Drawer.Screen name="index" options={{title: "Главная"}}/>
+        <Drawer.Screen name="plugins" options={{title: "Плагины"}}/>
       </Drawer>
     </GestureHandlerRootView>
   );
