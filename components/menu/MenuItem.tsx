@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
         gap: 12,
     },
     text: {
-        fontFamily: "Nunito-Sans",
+        fontFamily: "GothamPro",
         fontSize: 16,
     },
     hover: {

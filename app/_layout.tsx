@@ -11,7 +11,8 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
 
   const [loaded, error] = useFonts({
-    'Nunito-Sans': require('../assets/fonts/NunitoSans-Regular.ttf')
+    'GothamPro': require('../assets/fonts/gothampro.ttf'),
+    'GothamPro-Bold': require("../assets/fonts/gothampro_bold.ttf")
   })
 
   useEffect(() => {
