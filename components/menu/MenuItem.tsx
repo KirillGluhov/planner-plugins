@@ -1,4 +1,4 @@
-import { getIconSource } from "@/helpers/functions"
+import { getIconSource } from "@/helpers/utils"
 import { Pressable, TouchableOpacity, Image, Text, StyleSheet } from "react-native"
 import { useRouter } from "expo-router"
 import { MenuItemType } from "@/const/consts"

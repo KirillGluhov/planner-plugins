@@ -65,7 +65,6 @@ export class MonthCalendar
         return weeks;
     }
 
-    // Количество дней в месяце
     private getMonthLength(date: Date)
     {
         const longMonths = [0,2,4,6,7,9,11];
@@ -106,7 +105,6 @@ export class MonthCalendar
         return this.currentDate.getFullYear();
     }
 
-    // Название месяца
     getMonthName()
     {
         const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
@@ -114,7 +112,6 @@ export class MonthCalendar
         return months[this.currentDate.getMonth()] ?? "";
     }
 
-    // Название дня недели
     getDayOfWeekName(day: number)
     {
         const daysOfWeek = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
@@ -122,7 +119,6 @@ export class MonthCalendar
         return daysOfWeek[day] ?? "";
     }
 
-    // Количество недель в месяце
     getWeeksNumber()
     {
         if (this.monthWeekDayOfFirstDay === 1)
@@ -136,7 +132,6 @@ export class MonthCalendar
         }
     }
 
-    // День недели первого дня месяца
     private getNumberOfWeekDayForFirstDayOfMonth(date: Date)
     {
         const dayOfFirstWeek = date.getDate() % 7;
@@ -155,7 +150,6 @@ export class MonthCalendar
         }
     }
 
-    // День недели последнего дня месяца
     private getNumberOfWeekDayForLastDayOfMonth(date: Date, monthNumber: number, monthWeekDayOfFirstDay: number)
     {
         return (monthWeekDayOfFirstDay + (monthNumber - 1)) % 7;

@@ -1,4 +1,4 @@
-import CustomDrawerContent from "@/components/CustomDrawerContent";
+import CustomDrawerContent from "@/components/menu/CustomDrawerContent";
 import { useFonts } from "expo-font";
 //import { SplashScreen } from "expo-router";
 import * as SplashScreen from 'expo-splash-screen';

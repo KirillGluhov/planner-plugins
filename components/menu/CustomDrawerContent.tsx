@@ -4,7 +4,7 @@ import { DrawerNavigationHelpers, DrawerDescriptorMap } from "@react-navigation/
 import { DrawerNavigationState, ParamListBase } from "@react-navigation/native";
 import { JSX } from "react";
 import { View, StyleSheet, Image } from "react-native";
-import { MenuItem } from "./menu/MenuItem";
+import { MenuItem } from "./MenuItem";
 
 const CustomDrawerContent = (props: JSX.IntrinsicAttributes & { state: DrawerNavigationState<ParamListBase>; navigation: DrawerNavigationHelpers; descriptors: DrawerDescriptorMap; }) => {
     
@@ -17,6 +17,8 @@ const CustomDrawerContent = (props: JSX.IntrinsicAttributes & { state: DrawerNav
                 <MenuItem item={item} key={item.text}/>
             ))}
         </View>
+        
+        
     </DrawerContentScrollView>
 }
 
