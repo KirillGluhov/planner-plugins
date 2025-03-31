@@ -1,13 +1,17 @@
-type ComponentType = "component" | "page";
-type LocationType = "sidemenu" | "page";
+export interface PathType
+{
+    path: `/plugin/${string}`,
+    icon?: string,
+    text?: string
+}
 
 export interface ManifestType
 {
+    id: string,
     name?: string | null,
     version?: string | null,
     files?: string[] | null,
     description?: string | null,
-    entry?: string,
-    type?: ComponentType | null,
-    location?: LocationType | null
+    entry?: string | null,
+    menuItem?: PathType | null
 }

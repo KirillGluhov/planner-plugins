@@ -5,6 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import {Drawer} from "expo-router/drawer";
 import { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { PluginProvider } from "@/providers/PluginProvider";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -29,7 +30,8 @@ export default function RootLayout() {
 
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <PluginProvider>
+      <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         drawerContent={(props) => <CustomDrawerContent {...props}/>}
         screenOptions={{
@@ -42,7 +44,9 @@ export default function RootLayout() {
         <Drawer.Screen name="profile" options={{title: "Профиль"}}/>
         <Drawer.Screen name="index" options={{title: "Главная"}}/>
         <Drawer.Screen name="plugins" options={{title: "Плагины"}}/>
+        <Drawer.Screen name="plugin" options={{title: "Плагин"}}/>
       </Drawer>
     </GestureHandlerRootView>
+    </PluginProvider>
   );
 }

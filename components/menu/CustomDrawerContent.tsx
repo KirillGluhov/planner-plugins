@@ -2,11 +2,16 @@ import { menuItems } from "@/const/consts";
 import { DrawerContentScrollView } from "@react-navigation/drawer";
 import { DrawerNavigationHelpers, DrawerDescriptorMap } from "@react-navigation/drawer/lib/typescript/commonjs/src/types";
 import { DrawerNavigationState, ParamListBase } from "@react-navigation/native";
-import { JSX } from "react";
+import { JSX, useEffect } from "react";
 import { View, StyleSheet, Image } from "react-native";
 import { MenuItem } from "./MenuItem";
+import Calendar from "../calendar/Calendar";
+import { usePlugins } from "@/providers/PluginProvider";
 
 const CustomDrawerContent = (props: JSX.IntrinsicAttributes & { state: DrawerNavigationState<ParamListBase>; navigation: DrawerNavigationHelpers; descriptors: DrawerDescriptorMap; }) => {
+
+    const {getAllPaths} = usePlugins();
+    const paths = getAllPaths();
     
     return <DrawerContentScrollView style={styles.wrapper}>
         <View style={styles.logo}>
@@ -16,6 +21,12 @@ const CustomDrawerContent = (props: JSX.IntrinsicAttributes & { state: DrawerNav
             {menuItems.map((item) => (
                 <MenuItem item={item} key={item.text}/>
             ))}
+            {
+                paths.map((item) => (
+                    item ? <MenuItem item={item} key={item.text}/> : null
+                ))
+            }
+            <Calendar/>
         </View>
         
         

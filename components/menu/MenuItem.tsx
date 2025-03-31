@@ -1,6 +1,6 @@
 import { getIconSource } from "@/helpers/utils"
 import { Pressable, TouchableOpacity, Image, Text, StyleSheet } from "react-native"
-import { useRouter } from "expo-router"
+import { Href, useRouter } from "expo-router"
 import { MenuItemType } from "@/const/consts"
 
 export const MenuItem = ({item}: {item: MenuItemType}) => {
@@ -13,9 +13,9 @@ export const MenuItem = ({item}: {item: MenuItemType}) => {
                 pressed && styles.pressed,
                 styles.item
             ]}
-            onPress={() => router.push(item.path)}
+            onPress={() => router.push(item.path as Href)}
         >
-            <TouchableOpacity onPress={() => router.push(item.path)} style={styles.menuItem}>
+            <TouchableOpacity onPress={() => router.push(item.path as Href)} style={styles.menuItem}>
                 <Image style={styles.image} source={getIconSource(item.icon)}/>
                 <Text style={styles.text}>{item.text}</Text>
             </TouchableOpacity>

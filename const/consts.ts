@@ -1,9 +1,9 @@
 import { Href } from "expo-router"
 
 export interface MenuItemType {
-    path: Href,
+    path?: string,
     icon?: string,
-    text: string
+    text?: string
 }
 
 export const menuItems: MenuItemType[] = [

@@ -5,9 +5,6 @@ import { ScrollView } from "react-native-gesture-handler";
 import { getPluginNames } from "@/api/methods";
 import { PluginCard } from "./PluginCard";
 
-//const PLUGIN_PATH = FileSystem.documentDirectory + `manifest.json`;
-//const PLUGIN_URL = "http://81.31.247.55:8080/plugins/manifest/calendar";
-
 export function PluginsPage()
 {
     const [pluginNames, setPluginNames] = useState<string[]>([]);
